@@ -907,7 +907,7 @@ export default class Helpers {
         label = '';
       }
     } else {
-      label = mi18n.current[label] || '';
+      label = mi18n.current[label] || label;
     }
 
     if (!attrs.id) {
@@ -993,7 +993,8 @@ export default class Helpers {
    */
   processOptions(options) {
     const _this = this;
-    let actionButtons = [{
+    let {actionButtons, ...opts} = options;
+    actionButtons = [{
       id: 'clear',
       className: 'clear-all btn btn-danger',
       events: {
@@ -1016,8 +1017,8 @@ export default class Helpers {
           config.opts.onSave(evt, _this.data.formData);
         }
       }
-    }];
-    config.opts = Object.assign({}, {actionButtons}, options);
+    }].concat(options.actionButtons);
+    config.opts = Object.assign({}, {actionButtons}, opts);
     return config.opts;
   }
 
