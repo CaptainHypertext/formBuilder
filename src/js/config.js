@@ -104,7 +104,7 @@ export const defaultI18n = {
           editorTitle: 'Form Elements',
           editXML: 'Edit XML',
           enableOther: 'Enable &quot;Other&quot;',
-          enableOtherMsg: 'Let users to enter an unlisted option',
+          enableOtherMsg: 'Let users enter an unlisted option',
           fieldNonEditable: 'This field cannot be edited.',
           fieldRemoveWarning: 'Are you sure you want to remove this field?',
           fileUpload: 'File Upload',
